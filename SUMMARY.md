@@ -10,4 +10,5 @@
 * [cnpm安装](cnpman-zhuang.md)
 * [react点击事件如何传传传参](reactdian-ji-shi-jian-ru-he-chuan-chuan-chuan-can.md)
 * [Vue2.0 事件发射与接收](vue20-shi-jian-fa-she-yu-jie-shou.md)
+* [React and ES6 - Part 3, Binding to methods of React class \(ES7 included\)](react-and-es6-part-3-binding-to-methods-of-react-class-es7-included.md)
 
