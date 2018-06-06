@@ -9,4 +9,5 @@
 * [html5 postMessage跨域通信 1.解决页面与嵌套的iframe消息传递](html5-postmessagekua-yu-tong-xin-1-jiejue-ye-mian-yu-qian-tao-de-iframe-xiao-xi-chuan-di.md)
 * [cnpm安装](cnpman-zhuang.md)
 * [react点击事件如何传传传参](reactdian-ji-shi-jian-ru-he-chuan-chuan-chuan-can.md)
+* [Vue2.0 事件发射与接收](vue20-shi-jian-fa-she-yu-jie-shou.md)
 
