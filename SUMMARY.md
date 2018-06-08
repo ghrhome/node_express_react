@@ -12,4 +12,6 @@
 * [Vue2.0 事件发射与接收](vue20-shi-jian-fa-she-yu-jie-shou.md)
 * [React and ES6 - Part 3, Binding to methods of React class \(ES7 included\)](react-and-es6-part-3-binding-to-methods-of-react-class-es7-included.md)
 * [vue踩坑之全局使用axios](vuecai-keng-zhi-quan-ju-shi-yong-axios.md)
+* [面试官:既然React/Vue可以用Event Bus进行组件通信,你可以实现下吗?](mian-shi-5b983a-ji-ranreact-vue-ke-yi-yong-event-bus-jin-xing-zu-jian-tong-4fe12c-ni-ke-yi-shi-xian-xia-54173f.md)
+* [面试官: 你了解前端路由吗?](mian-shi-5b983a-ni-le-jie-qian-duan-lu-you-54173f.md)
 
