@@ -14,4 +14,5 @@
 * [vue踩坑之全局使用axios](vuecai-keng-zhi-quan-ju-shi-yong-axios.md)
 * [面试官:既然React/Vue可以用Event Bus进行组件通信,你可以实现下吗?](mian-shi-5b983a-ji-ranreact-vue-ke-yi-yong-event-bus-jin-xing-zu-jian-tong-4fe12c-ni-ke-yi-shi-xian-xia-54173f.md)
 * [面试官: 你了解前端路由吗?](mian-shi-5b983a-ni-le-jie-qian-duan-lu-you-54173f.md)
+* [面试官:请你实现一个深克隆](mian-shi-5b983a-qing-ni-shi-xian-yi-ge-shen-ke-long.md)
 
