@@ -108,7 +108,6 @@ contentBase: path.join(__dirname, "public")
 
 // 多目录
 contentBase: [path.join(__dirname, "public"), path.join(__dirname, "assets")]
-
 ```
 
 默认情况下，它将使用您当前的工作目录来提供内容。
@@ -136,9 +135,65 @@ overlay：{
 
 ### publicPath （[文档](https://webpack.js.org/configuration/dev-server/#devserver-publicpath-)） {#articleHeader10}
 
-* 配置了_publicPath_后，_`url`_`= '主机名' + '`_`publicPath`_`配置的' +`
-  `'原来的`_`url.path`_`'`。这个其实与_output.publicPath_用法大同小异。
+* 配置了_publicPath_后，`url= '主机名' + 'publicPath配置的' +`
+  `'原来的url.path'`。这个其实与_output.publicPath_用法大同小异。
 * _output.publicPath_是作用于_js, css, img_。而_devServer.publicPath_则作用于请求路径上的。
+
+```
+// devServer.publicPath
+publicPath: "/assets/"
+
+// 原本路径 --> 变换后的路径
+http://localhost:8080/app.js --> http://localhost:8080/assets/app.js
+```
+
+### proxy \([文档](https://webpack.js.org/configuration/dev-server/#devserver-proxy)\) {#articleHeader11}
+
+* 当您有一个单独的API后端开发服务器，并且想要在同一个域上发送API请求时，则代理这些
+  _url_。看例子好理解。
+
+```
+proxy: {
+    '/proxy': {
+        target: 'http://your_api_server.com',
+        changeOrigin: true,
+        pathRewrite: {
+            '^/proxy': ''
+        }
+  }
+
+```
+
+
+
+1. 假设你主机名为_localhost:8080_, 请求_API_的_url_是_http：//your\_api\_server.com/user/list_
+2. _**'/proxy'**_：如果点击某个按钮，触发请求_API_事件，这时请求_url_是`http：//localhost:8080`**`/proxy`**`/user/list`。
+3. _**changeOrigin**_：如果_true_，那么`http：//localhost:8080/proxy/user/listhttp：//your_api_server.com/proxy/user/list`
+   。但还不是我们要_url_。
+
+4. _**pathRewrite**_：重写路径。匹配_/proxy_，然后变为`''`，那么_url_最终为`http：//your_api_server.com/user/list`。
+
+### watchOptions （[文档](https://webpack.js.org/configuration/dev-server/#devserver-watchoptions-)） {#articleHeader12}
+
+* 一组自定义的监听模式，用来监听文件是否被改动过。
+
+```
+watchOptions: {
+  aggregateTimeout: 300,
+  poll: 1000，
+  ignored: /node_modules/
+}
+```
+
+
+
+1. **aggregateTimeout**：一旦第一个文件改变，在重建之前添加一个延迟。填以毫秒为单位的数字。
+2. **ignored**：观察许多文件系统会导致大量的CPU或内存使用量。可以排除一个巨大的文件夹。
+3. **poll**：填以毫秒为单位的数字。每隔（你设定的）多少时间查一下有没有文件改动过。不想启用也可以填`false`。
+
+---
+
+## ~~完结，希望大家喜欢！~~并未完结，敬请期待！ {#articleHeader13}
 
 
 
