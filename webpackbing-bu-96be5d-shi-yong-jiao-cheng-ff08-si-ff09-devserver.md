@@ -50,7 +50,7 @@ devServer: {
 
 * 热模块更新作用。即修改或模块后，保存会自动更新，页面不用刷新呈现最新的效果。
 * 这不是和_webpack.HotModuleReplacementPlugin （HMR）_这个插件不是一样功能吗？是的，不过请注意了，
-  _**`HMR`**_**`这个插件是真正实现热模块更新的`**。而_devServer_里配置了_hot: true_,
+  `HMR这个插件是真正实现热模块更新的`。而_devServer_里配置了_hot: true_,
   _webpack_会自动添加_HMR_插件。所以模块热更新最终还是_HMR_这个插件起的作用。
 
 ### host （[文档](https://webpack.js.org/configuration/dev-server/#devserver-host)） {#articleHeader2}
@@ -94,7 +94,63 @@ devServer: {
 
 * 你要提供哪里的内容给虚拟服务器用。这里最好填**绝对路径**。
 
- 
+### compress \([文档](https://webpack.js.org/configuration/dev-server/#devserver-compress)\) {#articleHeader5}
+
+* 如果为_true_，开启虚拟服务器时，为你的代码进行压缩。加快开发流程和优化的作用。
+
+### contentBase （[文档](https://webpack.js.org/configuration/dev-server/#devserver-contentbase)） {#articleHeader6}
+
+* 你要提供哪里的内容给虚拟服务器用。这里最好填**绝对路径**。
+
+```
+// 单目录
+contentBase: path.join(__dirname, "public")
+
+// 多目录
+contentBase: [path.join(__dirname, "public"), path.join(__dirname, "assets")]
+
+```
+
+默认情况下，它将使用您当前的工作目录来提供内容。
+
+### Open （[文档](https://webpack.js.org/configuration/dev-server/#devserver-open)） {#articleHeader7}
+
+* _true_，则自动打开浏览器。
+
+### overlay \([文档](https://webpack.js.org/configuration/dev-server/#devserver-overlay)\) {#articleHeader8}
+
+* 如果为_true_，在浏览器上全屏显示编译的errors或warnings。默认_false_（关闭）
+* 如果你只想看_error_，不想看_warning_。
+
+```
+overlay：{
+    errors：true，
+    warnings：false
+}
+```
+
+### quiet （[文档](https://webpack.js.org/configuration/dev-server/#devserver-quiet-)） {#articleHeader9}
+
+* _true_，则终端输出的只有初始启动信息。
+  _webpack_的警告和错误是不输出到终端的。
+
+### publicPath （[文档](https://webpack.js.org/configuration/dev-server/#devserver-publicpath-)） {#articleHeader10}
+
+* 配置了_publicPath_后，_`url`_`= '主机名' + '`_`publicPath`_`配置的' +`
+  `'原来的`_`url.path`_`'`。这个其实与_output.publicPath_用法大同小异。
+* _output.publicPath_是作用于_js, css, img_。而_devServer.publicPath_则作用于请求路径上的。
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
