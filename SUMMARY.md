@@ -17,4 +17,5 @@
 * [面试官:请你实现一个深克隆](mian-shi-5b983a-qing-ni-shi-xian-yi-ge-shen-ke-long.md)
 * [用es6语法实现event类](yong-es6-yu-fa-shi-xian-event-lei.md)
 * [详解webpack-dev-server的使用](xiang-jie-webpack-dev-server-de-shi-yong.md)
+* [\[Webpack并不难\]使用教程（四）--- devServer](webpackbing-bu-96be5d-shi-yong-jiao-cheng-ff08-si-ff09-devserver.md)
 
