@@ -19,4 +19,5 @@
 * [详解webpack-dev-server的使用](xiang-jie-webpack-dev-server-de-shi-yong.md)
 * [\[Webpack并不难\]使用教程（四）--- devServer](webpackbing-bu-96be5d-shi-yong-jiao-cheng-ff08-si-ff09-devserver.md)
 * [es6的Object.keys\(\)和map\(\)组合使用的案例](es6de-object-keys-he-map-zu-he-shi-yong-de-an-li.md)
+* [csp解决页面劫持](cspjie-jue-ye-mian-jie-chi.md)
 
