@@ -6,4 +6,5 @@
 * [nodejs使用request发送http请求](nodejsshi-yong-request-fa-song-http-qing-qiu.md)
 * [Express 应用生成器](express-ying-yong-sheng-cheng-qi.md)
 * [开启模块的 ES6 模式](kai-qi-mo-kuai-de-es6-mo-shi.md)
+* [Angular6项目构建](angular6xiang-mu-gou-jian.md)
 
