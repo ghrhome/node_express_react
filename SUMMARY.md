@@ -22,4 +22,5 @@
 * [csp解决页面劫持](cspjie-jue-ye-mian-jie-chi.md)
 * [期待已久 Nodejs 开始支持 ES6 模块](qi-dai-yi-jiu-nodejs-kai-shi-zhi-chi-es6-mo-kuai.md)
 * [Angular6项目构建](angular6xiang-mu-gou-jian.md)
+* [使用npm安装github仓库中的代码](shi-yongnpm-an-zhuang-github-cang-ku-zhong-de-dai-ma.md)
 
