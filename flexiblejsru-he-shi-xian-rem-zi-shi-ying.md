@@ -4,7 +4,7 @@
 
 [http://caibaojian.com/flexible-js-2.html](http://caibaojian.com/flexible-js-2.html)
 
-flexible.js正是利用[rem](http://caibaojian.com/t/rem)单位相对根元素&lt;html&gt;的font-size来做计算，而我们需要做的就是根据不同的屏幕算出html的font-size，而页面内的大小单位都根据[rem](http://caibaojian.com/t/rem)来写，从而实现了[自适应](http://caibaojian.com/t/%e8%87%aa%e9%80%82%e5%ba%94)。[·](http://caibaojian.com/flexible-js-2.html)
+flexible.js正是利用[rem](http://caibaojian.com/t/rem)单位相对根元素&lt;html&gt;的font-size来做计算，而我们需要做的就是根据不同的屏幕算出html的font-size，而页面内的大小单位都根据[rem](http://caibaojian.com/t/rem)来写，从而实现了[自适应](http://caibaojian.com/t/自适应)。[·](http://caibaojian.com/flexible-js-2.html)
 
 [**CSS**](http://caibaojian.com/css3/)**单位rem**
 
@@ -13,9 +13,6 @@ flexible.js正是利用[rem](http://caibaojian.com/t/rem)单位相对根元素&l
 原文链接：
 
 [http://caibaojian.com/flexible-js-2.html](http://caibaojian.com/flexible-js-2.html)
-
-  
-
 
 简单的理解，`rem`就是相对于根元素`<html>`的`font-size`来做计算。而我们的方案中使用`rem`单位，是能轻易的根据`<html>`的`font-size`计算出元素的盒模型大小。而这个特色对我们来说是特别的有益处。[·](http://caibaojian.com/flexible-js-2.html)
 
@@ -37,7 +34,7 @@ flexible.js正是利用[rem](http://caibaojian.com/t/rem)单位相对根元素&l
     var scale = 0;
     var tid;
     var flexible = lib.flexible || (lib.flexible = {});
-    
+
     if (metaEl) {
         console.warn('将根据已有的meta标签来设置缩放比例');
         var match = metaEl.getAttribute('content').match(/initial\-scale=([\d\.]+)/);
@@ -123,7 +120,7 @@ flexible.js正是利用[rem](http://caibaojian.com/t/rem)单位相对根元素&l
             doc.body.style.fontSize = 12 * dpr + 'px';
         }, false);
     }
-    
+
 
     refreshRem();
 
@@ -168,10 +165,6 @@ if (!dpr && !scale) {
     scale = 1 / dpr;
 }
 ```
-
-
-
-
 
 
 

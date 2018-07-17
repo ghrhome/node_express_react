@@ -24,4 +24,5 @@
 * [Angular6项目构建](angular6xiang-mu-gou-jian.md)
 * [使用npm安装github仓库中的代码](shi-yongnpm-an-zhuang-github-cang-ku-zhong-de-dai-ma.md)
 * [flexible.js如何实现rem自适应](flexiblejsru-he-shi-xian-rem-zi-shi-ying.md)
+* [移动前端适配方法总结](yi-dong-qian-duan-shi-pei-fang-fa-zong-jie.md)
 
