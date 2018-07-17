@@ -4,10 +4,7 @@
 
 [http://caibaojian.com/mobile-responsive-example.html](http://caibaojian.com/mobile-responsive-example.html)
 
-  
-
-
-互联网上的[自适应](http://caibaojian.com/t/%e8%87%aa%e9%80%82%e5%ba%94)方案到底有几种呢？就我个人实践所知，有这么几种方案：[·](http://caibaojian.com/mobile-responsive-example.html)
+互联网上的[自适应](http://caibaojian.com/t/自适应)方案到底有几种呢？就我个人实践所知，有这么几种方案：[·](http://caibaojian.com/mobile-responsive-example.html)
 
 1. 固定一个某些宽度，使用一个模式，加上少许的媒体查询方案
 2. 使用flexbox解决方案
@@ -15,7 +12,7 @@
 4. 使用
    [rem](http://caibaojian.com/t/rem)
 
-淘宝最近开源的一个框架和网易的框架有同工之异。都是采用[rem](http://caibaojian.com/t/rem)实现一稿解决所有设置[自适应](http://caibaojian.com/t/%e8%87%aa%e9%80%82%e5%ba%94)。在没出来这种方案之前，第一种做法的人数也不少。类似以下说到的拉钩网。看一下流云诸葛的文章。
+淘宝最近开源的一个框架和网易的框架有同工之异。都是采用[rem](http://caibaojian.com/t/rem)实现一稿解决所有设置[自适应](http://caibaojian.com/t/自适应)。在没出来这种方案之前，第一种做法的人数也不少。类似以下说到的拉钩网。看一下流云诸葛的文章。
 
 以下摘自：[从网易与淘宝的font-size思考前端设计稿与工作流](http://www.cnblogs.com/lyzg/p/4877277.html)
 
