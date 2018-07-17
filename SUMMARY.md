@@ -25,4 +25,5 @@
 * [使用npm安装github仓库中的代码](shi-yongnpm-an-zhuang-github-cang-ku-zhong-de-dai-ma.md)
 * [flexible.js如何实现rem自适应](flexiblejsru-he-shi-xian-rem-zi-shi-ying.md)
 * [移动前端适配方法总结](yi-dong-qian-duan-shi-pei-fang-fa-zong-jie.md)
+* [移动前端自适应适配布局解决方案和比较](yi-dong-qian-duan-zi-shi-ying-shi-pei-bu-ju-jie-jue-fang-an-he-bi-jiao.md)
 

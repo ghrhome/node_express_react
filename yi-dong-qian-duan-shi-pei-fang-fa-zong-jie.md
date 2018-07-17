@@ -13,17 +13,17 @@
 ```
 // 根据设计稿的宽度来传参 比如640 750 1125
 !function(designWidth){
-	if (/Android(?:\s+|\/)(\d+\.\d+)?/.test(navigator.userAgent)) {
-		var version = parseFloat(RegExp.$1);
-		if (version > 2.3) {
-			var phoneScale = parseInt(window.screen.width) / designWidth;
-			document.write('<meta name="viewport" content="width=' + designWidth + ',minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi">');
-		} else {
-			document.write('<meta name="viewport" content="width=' + designWidth + ',target-densitydpi=device-dpi">');
-		}
-	} else {
-		document.write('<meta name="viewport" content="width=' + designWidth + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui,viewport-fit=cover">');
-	}
+    if (/Android(?:\s+|\/)(\d+\.\d+)?/.test(navigator.userAgent)) {
+        var version = parseFloat(RegExp.$1);
+        if (version > 2.3) {
+            var phoneScale = parseInt(window.screen.width) / designWidth;
+            document.write('<meta name="viewport" content="width=' + designWidth + ',minimum-scale=' + phoneScale + ',maximum-scale=' + phoneScale + ', target-densitydpi=device-dpi">');
+        } else {
+            document.write('<meta name="viewport" content="width=' + designWidth + ',target-densitydpi=device-dpi">');
+        }
+    } else {
+        document.write('<meta name="viewport" content="width=' + designWidth + ',user-scalable=no,target-densitydpi=device-dpi,minimal-ui,viewport-fit=cover">');
+    }
 }(640);
 ```
 
@@ -68,10 +68,10 @@ audio,canvas,video,progress{display:inline-block;}
 </style>
 </head>
 <body>
-	<!-- 页面结构写在这里 -->
-	<!-- 页面结构写在这里 -->
-	<!-- 页面结构写在这里 -->
-	<!-- 页面结构写在这里 -->
+    <!-- 页面结构写在这里 -->
+    <!-- 页面结构写在这里 -->
+    <!-- 页面结构写在这里 -->
+    <!-- 页面结构写在这里 -->
 </body>
 </html>
 ```
@@ -79,9 +79,6 @@ audio,canvas,video,progress{display:inline-block;}
 原文链接：
 
 [http://caibaojian.com/mobile-responsive.html](http://caibaojian.com/mobile-responsive.html)
-
-  
-
 
 **方案2：使用淘宝的**[**rem**](http://caibaojian.com/t/rem)**精简版**[·](http://caibaojian.com/mobile-responsive.html)
 
@@ -91,81 +88,81 @@ audio,canvas,video,progress{display:inline-block;}
 
 ```
 function(designWidth, maxWidth) {
-	var doc = document,
-		win = window;
-	var docEl = doc.documentElement;
-	var metaEl,
-		metaElCon;
-	var styleText,
-		remStyle = document.createElement("style");
-	var tid;
+    var doc = document,
+        win = window;
+    var docEl = doc.documentElement;
+    var metaEl,
+        metaElCon;
+    var styleText,
+        remStyle = document.createElement("style");
+    var tid;
 
-	function refreshRem() {
-		// var width = parseInt(window.screen.width); // uc有bug
-		var width = docEl.getBoundingClientRect().width;
-		if (!maxWidth) {
-			maxWidth = 540;
-		};
-		if (width > maxWidth) { // 淘宝做法：限制在540的屏幕下，这样100%就跟10rem不一样了
-			width = maxWidth;
-		}
-		var rem = width * 100 / designWidth;
-		// var rem = width / 10; // 如果要兼容vw的话分成10份 淘宝做法
-		//docEl.style.fontSize = rem + "px"; //旧的做法，在uc浏览器下面会有切换横竖屏时定义了font-size的标签不起作用的bug
-		remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
-	}
+    function refreshRem() {
+        // var width = parseInt(window.screen.width); // uc有bug
+        var width = docEl.getBoundingClientRect().width;
+        if (!maxWidth) {
+            maxWidth = 540;
+        };
+        if (width > maxWidth) { // 淘宝做法：限制在540的屏幕下，这样100%就跟10rem不一样了
+            width = maxWidth;
+        }
+        var rem = width * 100 / designWidth;
+        // var rem = width / 10; // 如果要兼容vw的话分成10份 淘宝做法
+        //docEl.style.fontSize = rem + "px"; //旧的做法，在uc浏览器下面会有切换横竖屏时定义了font-size的标签不起作用的bug
+        remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
+    }
 
-	// 设置 viewport ，有的话修改 没有的话设置
-	metaEl = doc.querySelector('meta[name="viewport"]');
-	// 20171219修改：增加 viewport-fit=cover ，用于适配iphoneX
-	metaElCon = "width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no,viewport-fit=cover";
-	if(metaEl) {
-		metaEl.setAttribute("content", metaElCon);
-	}else{
-		metaEl = doc.createElement("meta");
-		metaEl.setAttribute("name", "viewport");
-		metaEl.setAttribute("content", metaElCon);
-		if (docEl.firstElementChild) {
-			docEl.firstElementChild.appendChild(metaEl);
-		}else{
-			var wrap = doc.createElement("div");
-			wrap.appendChild(metaEl);
-			doc.write(wrap.innerHTML);
-			wrap = null;
-		}
-	}
+    // 设置 viewport ，有的话修改 没有的话设置
+    metaEl = doc.querySelector('meta[name="viewport"]');
+    // 20171219修改：增加 viewport-fit=cover ，用于适配iphoneX
+    metaElCon = "width=device-width,initial-scale=1,maximum-scale=1.0,user-scalable=no,viewport-fit=cover";
+    if(metaEl) {
+        metaEl.setAttribute("content", metaElCon);
+    }else{
+        metaEl = doc.createElement("meta");
+        metaEl.setAttribute("name", "viewport");
+        metaEl.setAttribute("content", metaElCon);
+        if (docEl.firstElementChild) {
+            docEl.firstElementChild.appendChild(metaEl);
+        }else{
+            var wrap = doc.createElement("div");
+            wrap.appendChild(metaEl);
+            doc.write(wrap.innerHTML);
+            wrap = null;
+        }
+    }
 
-	//要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
-	refreshRem();
+    //要等 wiewport 设置好后才能执行 refreshRem，不然 refreshRem 会执行2次；
+    refreshRem();
 
-	if (docEl.firstElementChild) {
-		docEl.firstElementChild.appendChild(remStyle);
-	} else {
-		var wrap = doc.createElement("div");
-		wrap.appendChild(remStyle);
-		doc.write(wrap.innerHTML);
-		wrap = null;
-	}
+    if (docEl.firstElementChild) {
+        docEl.firstElementChild.appendChild(remStyle);
+    } else {
+        var wrap = doc.createElement("div");
+        wrap.appendChild(remStyle);
+        doc.write(wrap.innerHTML);
+        wrap = null;
+    }
 
-	win.addEventListener("resize", function() {
-		clearTimeout(tid); //防止执行两次
-		tid = setTimeout(refreshRem, 300);
-	}, false);
+    win.addEventListener("resize", function() {
+        clearTimeout(tid); //防止执行两次
+        tid = setTimeout(refreshRem, 300);
+    }, false);
 
-	win.addEventListener("pageshow", function(e) {
-		if (e.persisted) { // 浏览器后退的时候重新计算
-			clearTimeout(tid);
-			tid = setTimeout(refreshRem, 300);
-		}
-	}, false);
+    win.addEventListener("pageshow", function(e) {
+        if (e.persisted) { // 浏览器后退的时候重新计算
+            clearTimeout(tid);
+            tid = setTimeout(refreshRem, 300);
+        }
+    }, false);
 
-	if (doc.readyState === "complete") {
-		doc.body.style.fontSize = "16px";
-	} else {
-		doc.addEventListener("DOMContentLoaded", function(e) {
-			doc.body.style.fontSize = "16px";
-		}, false);
-	}
+    if (doc.readyState === "complete") {
+        doc.body.style.fontSize = "16px";
+    } else {
+        doc.addEventListener("DOMContentLoaded", function(e) {
+            doc.body.style.fontSize = "16px";
+        }, false);
+    }
 })(750, 750);
 ```
 
@@ -228,14 +225,6 @@ audio,canvas,video,progress{display:inline-block;}
 </body>
 </html>
 ```
-
-
-
-
-
-
-
-
 
 
 
