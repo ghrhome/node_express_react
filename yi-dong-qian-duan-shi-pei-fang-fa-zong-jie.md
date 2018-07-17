@@ -106,7 +106,7 @@ function(designWidth, maxWidth) {
         if (width > maxWidth) { // 淘宝做法：限制在540的屏幕下，这样100%就跟10rem不一样了
             width = maxWidth;
         }
-        var rem = width * 100 / designWidth;
+        var rem = width * 100 / designWidth;//网易做法
         // var rem = width / 10; // 如果要兼容vw的话分成10份 淘宝做法
         //docEl.style.fontSize = rem + "px"; //旧的做法，在uc浏览器下面会有切换横竖屏时定义了font-size的标签不起作用的bug
         remStyle.innerHTML = 'html{font-size:' + rem + 'px;}';
