@@ -26,4 +26,5 @@
 * [flexible.js如何实现rem自适应](flexiblejsru-he-shi-xian-rem-zi-shi-ying.md)
 * [移动前端适配方法总结](yi-dong-qian-duan-shi-pei-fang-fa-zong-jie.md)
 * [移动前端自适应适配布局解决方案和比较](yi-dong-qian-duan-zi-shi-ying-shi-pei-bu-ju-jie-jue-fang-an-he-bi-jiao.md)
+* [微信内置浏览器浏览H5页面弹出的键盘遮盖文本框的解决办法](wei-xin-nei-zhi-liu-lan-qi-liu-lan-h5-ye-mian-dan-chu-de-jian-pan-zhe-gai-wen-ben-kuang-de-jie-jue-ban-fa.md)
 
